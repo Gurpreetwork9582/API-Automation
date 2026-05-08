@@ -37,7 +37,7 @@ class jsonplaceholder():
         self.response=requests.delete(f"{Baseurl}/posts/1")
         assert self.response.status_code == 200
         assert self.response.json()== {}
-        assert self.reponse.elapsed.total_seconds() <2
+        assert self.reponse.elapsed.total_seconds() < 2
                
         
         
