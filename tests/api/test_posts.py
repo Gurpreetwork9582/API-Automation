@@ -10,8 +10,7 @@ Schema_path_posts="https://jsonplaceholder.typicode.com/posts"
 
 
 
-class Test_jsonplaceholder():
-        
+class Testjsonplaceholder():
             
     def test_get_website(self):
         self.response = requests.get(Baseurl)
@@ -22,7 +21,7 @@ class Test_jsonplaceholder():
         self.posts_id=1
         self.response=requests.get(f"{Baseurl}/{self.posts}/{self.posts_id}")
         print(self.response.json())
-        assert Validate_schema(self.response,"https://jsonplaceholder.typicode.com/posts/1")
+        Validate_schema(self.response.json(), "schemas/posts_schema.json")
         
     def test_post_posts_new(self):
         self.posts = "posts"
@@ -34,24 +33,13 @@ class Test_jsonplaceholder():
 
     def test_post_Update(self):
         self.data = {"title":"New line"}
-        self.reponse = requests.patch(f"{Baseurl}/posts/101",data=self.data)
+        self.response = requests.patch(f"{Baseurl}/posts/101",data=self.data)
         print(self.response.json())
-        self.reponse_json=self.response.json()
-        assert self.reponse_json["title"] == self.data["title"]
+        self.response_json=self.response.json()
+        assert self.response_json["title"] == self.data["title"]
 
     def test_delete_post(self):
         self.response=requests.delete(f"{Baseurl}/posts/1")
         assert self.response.status_code == 200
         assert self.response.json()== {}
-        assert self.reponse.elapsed.total_seconds() < 2
-               
-        
-        
-scanner = Test_jsonplaceholder()
-#scanner.test_get_website()
-scanner.test_get_posts_1()
-#scanner.test_post_posts_new()
-#scanner.test_post_Update()
-#scanner.test_delete_post()
-
-        
+        assert self.response.elapsed.total_seconds() < 2
