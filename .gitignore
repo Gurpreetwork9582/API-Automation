@@ -1,0 +1,28 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+
+# Sensitive Information (API Keys, Secrets)
+.env
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Unit test / coverage reports
+.tox/
+.coverage
+htmlcov/
+.pytest_cache/
+
+# IDE Settings (Optional but recommended)
+.vscode/
+.idea/
