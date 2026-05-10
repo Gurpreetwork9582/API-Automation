@@ -5,6 +5,9 @@ API Automation Framework (Pytest + Requests)
 This is an API test automation framework built using Python and Pytest.
 It validates REST APIs using response assertions, schema validation, and CI/CD integration via GitHub Actions.
 
+Results:
+<img width="1459" height="729" alt="Screenshot 2026-05-10 at 6 14 14 PM" src="https://github.com/user-attachments/assets/3b9d7e4d-a534-41d3-a1a6-c20919838f8d" />
+<img width="1470" height="811" alt="Screenshot 2026-05-10 at 7 07 42 PM" src="https://github.com/user-attachments/assets/10e8c7f0-c5ed-4f12-b0c7-0541dd2c4ecc" />
 
 API used for testing: https://jsonplaceholder.typicode.com
 
@@ -109,6 +112,8 @@ Setup Python environment
 Install dependencies
 Run Flake8 lint checks
 Execute pytest suite
+<img width="1462" height="675" alt="Screenshot 2026-05-10 at 6 31 04 PM" src="https://github.com/user-attachments/assets/3a038faf-efa1-4fd2-9b8c-d82774676949" />
+![Uploading Screenshot 2026-05-10 at 6.14.14 PM.png…]()
 
 🎯 Key Outcome
 Built a modular API automation framework
